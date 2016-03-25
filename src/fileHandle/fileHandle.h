@@ -3,6 +3,7 @@
  *
  *  Created on: 25.03.2016
  *      Author: max
+ * Description: handles all actions related to the outputfile onboard of the datalogger
  */
 
 #ifndef FILEHANDLE_H_
