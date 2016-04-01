@@ -8,6 +8,7 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include src/udpHandle/subdir.mk
 -include src/sendMessage/subdir.mk
 -include src/fileHandle/subdir.mk
 -include src/subdir.mk
@@ -40,19 +41,19 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: datalogger
+all: Datalogger
 
 # Tool invocations
-datalogger: $(OBJS) $(USER_OBJS)
+Datalogger: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++  -o "datalogger" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++  -o "Datalogger" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(OBJS)$(C++_DEPS)$(C_DEPS)$(CC_DEPS)$(CPP_DEPS)$(EXECUTABLES)$(CXX_DEPS)$(C_UPPER_DEPS) datalogger
+	-$(RM) $(OBJS)$(C++_DEPS)$(C_DEPS)$(CC_DEPS)$(CPP_DEPS)$(EXECUTABLES)$(CXX_DEPS)$(C_UPPER_DEPS) Datalogger
 	-@echo ' '
 
 .PHONY: all clean dependents

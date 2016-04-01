@@ -13,8 +13,29 @@
 class sendMessage
 {
 public:
-  void printMessage();
-private:
+	//Constructor
+	sendMessage();
+	sendMessage(char* message);
+
+	//Destructor
+	virtual  ̃sendMessage();
+
+	//utility Functions
+	void setNext(sendMessage *next);
+	void setLast(sendMessage *last);
+	void setMessage(char* message);
+
+	void getLast();
+	void getNext();
+	void getMessage();
+
+	void printMessage();
+
+	//Saved Variables
+protected:
+	char* sMessage;
+	sendMessage *pLast;
+	sendMessage *pNext;
 };
 
 
