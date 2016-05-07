@@ -15,10 +15,10 @@ class sendMessage
 public:
 	//Constructor
 	sendMessage();
-	sendMessage(char* message);
+	//sendMessage(char* message);
 
 	//Destructor
-	virtual  ̃sendMessage();
+	//virtual  ̃sendMessage();
 
 	//utility Functions
 	void setNext(sendMessage *next);

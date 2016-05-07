@@ -10,6 +10,11 @@
 
 using namespace std;
 
+sendMessage::sendMessage()
+{
+
+}
+
 void sendMessage::printMessage()
 {
 	cout << "My Class Prints \n";

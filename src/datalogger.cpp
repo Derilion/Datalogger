@@ -11,6 +11,7 @@
 #include <time.h>
 #include "sendMessage/sendMessage.h"
 #include "fileHandle/fileHandle.h"
+#include "udpHandle/udpHandle.h"
 using namespace std;
 
 int main() {
@@ -24,10 +25,10 @@ int main() {
 	//Initialize spi connection
 
 	//Initialize udp
-
+	udpHandle serviceStation(12000, "127.0.0.1");
 	//Initialize Hashing Compression
 
-	//SPI to thingy
+	//SPI to thingy // not going to happen
 
 	//calc used space
 
@@ -36,7 +37,10 @@ int main() {
 	//sent message
 
 	//write message to emmc
+
+
 	handle.writeToFile(lulu);
+	serviceStation.sendUDP("Hallo");
 	message.printMessage();
 
 	cout << "It Works!" << endl; // prints It Works!
