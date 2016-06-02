@@ -18,7 +18,7 @@
 #include "udpHandle.h"
 
 using namespace std;
-
+//new comment
 udpHandle::udpHandle(int newSocket, char* newIP)
 {
 	this->ipsocket = newSocket;
